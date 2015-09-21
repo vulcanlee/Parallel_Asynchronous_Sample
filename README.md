@@ -1,0 +1,2 @@
+# Parallel_Asynchronous_Sample
+多執行緒處理和非同步處理 Sample
