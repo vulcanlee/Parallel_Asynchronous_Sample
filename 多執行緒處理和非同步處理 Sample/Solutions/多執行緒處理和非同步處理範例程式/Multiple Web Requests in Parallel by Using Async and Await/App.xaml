@@ -1,0 +1,9 @@
+﻿<Application x:Class="Multiple_Web_Requests_in_Parallel_by_Using_Async_and_Await.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Multiple_Web_Requests_in_Parallel_by_Using_Async_and_Await"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

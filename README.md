@@ -58,6 +58,7 @@
   *009 Race Condition using lock keyword
 
 * 相關連結：
+  * 範例程式: https://github.com/vulcanlee/Parallel_Asynchronous_Sample
   * http://www.amazon.com/Exam-Ref-70-483-Programming-MCSD/dp/0735676828
   * http://www.amazon.com/CLR-via-4th-Developer-Reference/dp/0735667454/ref=sr_1_1?s=books&ie=UTF8&qid=1442807191&sr=1-1&keywords=Microsoft.Press.CLR.via.Csharp
   * http://www.amazon.com/Asynchronous-Programming-NET-Richard-Blewett/dp/1430259205/ref=sr_1_1?s=books&ie=UTF8&qid=1442807236&sr=1-1&keywords=async+await

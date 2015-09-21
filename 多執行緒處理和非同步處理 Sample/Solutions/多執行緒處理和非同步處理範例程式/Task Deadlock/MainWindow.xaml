@@ -1,0 +1,25 @@
+﻿<Window x:Class="Task_Deadlock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_Deadlock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnDeadlock" Content="我會產生死結(同步呼叫，有切換)" Click="Button_Click" />
+        <Button x:Name="btnDeadlock2" Grid.Column="1" Content="No Deadlock 2(同步呼叫，不切換)" Click="Button2_Click" />
+        <Button x:Name="btnDeadlock1" Grid.Column="2" Content="我不會產生死結 1 (非同步呼叫)" Click="Button1_Click" />
+        <Button x:Name="btnDeadlock3" Grid.Row="1" Content="我需要2秒鐘" Click="Button3_Click" />
+        <Button x:Name="btnDeadlock4" Grid.Row="1" Grid.Column="1" Content="我需要1秒鐘" Click="Button4_Click" />
+    </Grid>
+</Window>
