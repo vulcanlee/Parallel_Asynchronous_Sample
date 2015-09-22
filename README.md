@@ -78,7 +78,7 @@
   * https://msdn.microsoft.com/zh-tw/library/system.threading.thread(v=vs.110).aspx
   * https://msdn.microsoft.com/en-us/library/jj152938(v=vs.110).aspx
   * https://msdn.microsoft.com/en-us/library/dd997373(v=vs.110).aspx
-  * 
+  * https://channel9.msdn.com/Events/aspConf/aspConf/Async-in-ASP-NET
 
 注意事項
 ------------
