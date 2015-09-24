@@ -16,10 +16,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnDeadlock" Content="我會產生死結(同步呼叫，有切換)" Click="Button_Click" />
+        <Button x:Name="btnDeadlock" Content="我會產生死結(同步呼叫，有切換)" Click="Button_Click" Background="#FFFF0101" />
         <Button x:Name="btnDeadlock2" Grid.Column="1" Content="No Deadlock 2(同步呼叫，不切換)" Click="Button2_Click" />
         <Button x:Name="btnDeadlock1" Grid.Column="2" Content="我不會產生死結 1 (非同步呼叫)" Click="Button1_Click" />
         <Button x:Name="btnDeadlock3" Grid.Row="1" Content="我需要2秒鐘" Click="Button3_Click" />
         <Button x:Name="btnDeadlock4" Grid.Row="1" Grid.Column="1" Content="我需要1秒鐘" Click="Button4_Click" />
+        <Button x:Name="btnDeadlock5" Grid.Row="1" Grid.Column="2" Content="我會產生死結(同步呼叫，有切換)" Click="Button5_Click" Background="#FFFF0101" />
     </Grid>
 </Window>

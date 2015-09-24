@@ -29,6 +29,7 @@ namespace Task_Deadlock
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DoSomethingAsync().Wait();
+            Console.WriteLine("Continue Button_Click");
             //never gets past this point
             btnDeadlock.Content = "Running";
         }
@@ -40,7 +41,7 @@ namespace Task_Deadlock
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
             DoSomething2Async().Wait();
-            //never gets past this point
+            Console.WriteLine("Continue Button2_Click");
             btnDeadlock2.Content = "I'm no deadlock";
         }
         private async void Button3_Click(object sender, RoutedEventArgs e)
@@ -65,13 +66,31 @@ namespace Task_Deadlock
 
             btnDeadlock4.Content = "花費時間" + (fooDT2 - fooDT1);
         }
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+            var fooTask = DoSomethingWithResultAsync();
+            Console.WriteLine("Continue Button5_Click");
+            //never gets past this point
+            Console.WriteLine(fooTask.Result);
+        }
         private async Task DoSomethingAsync()
         {
             await Task.Delay(1000);
+            // 這行永遠執行不到，因為，...
+            Console.WriteLine("Complete DoSomethingAsync");
+        }
+        private async Task<string> DoSomethingWithResultAsync()
+        {
+            await Task.Delay(1000);
+            // 這行永遠執行不到，因為，...
+            Console.WriteLine("Complete DoSomethingAsync");
+            return "Nothing";
         }
         private async Task DoSomething2Async()
         {
             await Task.Delay(1000).ConfigureAwait(false);
+            // 為什麼這行可以執行到呢?
+            Console.WriteLine("Complete DoSomething2Async");
         }
         private async Task DoSomething3Async()
         {
