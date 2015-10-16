@@ -41,6 +41,7 @@ namespace Using_AsyncCallback_Delegate_to_End_Asynchronous_Operation
                 string queryFQDN = "www.microsoft.com";
 
                 string host;
+                // 在這個迴圈內，我們可以輸入多個 URL，程式會立即啟動非同步工作取得該 URL 的內容
                 do
                 {
                     Console.Write(" Enter the name of a host computer or <enter> to finish: ");
@@ -56,6 +57,7 @@ namespace Using_AsyncCallback_Delegate_to_End_Asynchronous_Operation
 
                         Interlocked.Increment(ref requestCounter);
                         // Start the asynchronous request for DNS information.
+                        // 呼叫 BeginXXX 啟動非同步工作
                         Dns.BeginGetHostEntry(host, callBack, host);
                     }
                 } while (host.Length > 0);
@@ -68,10 +70,13 @@ namespace Using_AsyncCallback_Delegate_to_End_Asynchronous_Operation
                 // 
                 // The user has entered all of the host names for lookup.
                 // Now wait until the threads complete.
+                // 該迴圈的用意，僅是當所有非同步工作都處理完成之後，才會繼續執行該迴圈後的程式碼，
+                // 也就是列出所有非同步執行結果的內容
                 while (requestCounter > 0)
                 {
                     UpdateUserInterface();
                 }
+
                 // Display the results.
                 for (int i = 0; i < hostNames.Count; i++)
                 {
@@ -112,11 +117,13 @@ namespace Using_AsyncCallback_Delegate_to_End_Asynchronous_Operation
             // The following method is called when each asynchronous operation completes.
             static void ProcessDnsInformation(IAsyncResult result)
             {
+                // 當這段程式碼開始被執行到的時候，就表示某個非同步工作已經完成了
                 string hostName = (string)result.AsyncState;
                 hostNames.Add(hostName);
                 try
                 {
                     // Get the results.
+                    // 我們需要透過呼叫 EndXXX 來取得非同步處理工作的完成結果內容
                     IPHostEntry host = Dns.EndGetHostEntry(result);
                     hostData.Add(host);
                 }

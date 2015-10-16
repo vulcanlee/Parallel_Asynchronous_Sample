@@ -27,7 +27,8 @@ namespace Uses_Dictionary
         {
             for (int i = 0; i < 1000; i++)
             {
-                // we use the Add method. The Dictionary program will fail—you cannot Add an existing element.
+                // we use the Add method. 
+                // The Dictionary program will fail—you cannot Add an existing element.
                 _dictionary.Add(i.ToString(), i);
             }
         }

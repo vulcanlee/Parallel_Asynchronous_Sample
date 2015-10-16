@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thread", "Thread", "{BDDE201C-D921-4816-8A5A-D3C338350C82}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Asynchronous Programming Patterns", "Asynchronous Programming Patterns", "{0E5583B2-79B4-4B0B-96D8-B2B9969B988A}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002 Blocking Application Execution by Ending Async Operation", "Blocking Application Execution by Ending Async Operation\002 Blocking Application Execution by Ending Async Operation.csproj", "{E519D88E-C177-411E-A0AE-3023EAF40F6E}"
 EndProject
@@ -90,6 +93,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemoProject", "..\AsyncDemoProject\AsyncDemoProject\AsyncDemoProject.csproj", "{EFD96077-7004-4B9A-A817-E2478CB01041}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "012 Task Deadlock", "Task Deadlock\012 Task Deadlock.csproj", "{5BD6904E-1B51-4705-A02C-54FAB6CBFE34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AsyncAwait", "AsyncAwait", "{B05827BC-D7E2-4A7B-BBAB-1CC8E624FC8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{F27000C2-E6BD-4AAC-BA68-7440F617C6BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -245,6 +252,10 @@ Global
 		{5BD6904E-1B51-4705-A02C-54FAB6CBFE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD6904E-1B51-4705-A02C-54FAB6CBFE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD6904E-1B51-4705-A02C-54FAB6CBFE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27000C2-E6BD-4AAC-BA68-7440F617C6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27000C2-E6BD-4AAC-BA68-7440F617C6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27000C2-E6BD-4AAC-BA68-7440F617C6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27000C2-E6BD-4AAC-BA68-7440F617C6BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -287,5 +298,6 @@ Global
 		{9995D749-77A4-43E9-A1DD-E4688E074C18} = {5F0D12E2-E577-45CA-B65C-6B754F60EDFD}
 		{EFD96077-7004-4B9A-A817-E2478CB01041} = {2655C809-D3E6-4D34-9A14-B906F76F08D9}
 		{5BD6904E-1B51-4705-A02C-54FAB6CBFE34} = {5F0D12E2-E577-45CA-B65C-6B754F60EDFD}
+		{F27000C2-E6BD-4AAC-BA68-7440F617C6BF} = {B05827BC-D7E2-4A7B-BBAB-1CC8E624FC8E}
 	EndGlobalSection
 EndGlobal

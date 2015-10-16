@@ -21,15 +21,18 @@ namespace Blocking_Application_Execution_Using_an_AsyncWaitHandle
             string queryFQDN = "www.microsoft.com";
 
             // Start the asynchronous request for DNS information.
+            // 呼叫 BeginXXX 啟動非同步工作
             IAsyncResult result = Dns.BeginGetHostEntry(queryFQDN, null, null);
             Console.WriteLine("Processing request for information...");
             // Wait until the operation completes.
+            // 當執行下面程式碼時候，整個 Thread 會被 Block，這個Thread要能繼續執行，必須等候到非同步工作完成
             result.AsyncWaitHandle.WaitOne();
 
             // The operation completed. Process the results.
             try
             {
                 // Get the results.
+                // 由於非同步工作已經完成了，所以，我們在此呼叫了 EndXXX 方法，取得非同步工作的處理結果
                 IPHostEntry host = Dns.EndGetHostEntry(result);
                 string[] aliases = host.Aliases;
                 IPAddress[] addresses = host.AddressList;

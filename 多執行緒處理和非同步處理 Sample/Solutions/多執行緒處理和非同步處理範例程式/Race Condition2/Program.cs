@@ -35,7 +35,7 @@ namespace Race_Condition2
 
         private static void DoWork1()
         {
-            for (int index = 0; index < 2000000; index++)
+            for (int index = 0; index < 10000000; index++)
             {
                 counter++;
             }

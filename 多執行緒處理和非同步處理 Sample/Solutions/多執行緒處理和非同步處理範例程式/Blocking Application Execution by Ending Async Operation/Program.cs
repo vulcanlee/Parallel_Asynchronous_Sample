@@ -25,12 +25,15 @@ namespace Blocking_Application_Execution_by_Ending_Async_Operation
                 // Start the asynchronous request for DNS information.
                 // This example does not use a delegate or user-supplied object
                 // so the last two arguments are null.
+                // 呼叫 BeginXXX 啟動非同步工作
                 IAsyncResult result = Dns.BeginGetHostEntry(queryFQDN, null, null);
                 Console.WriteLine("Processing your request for information...");
                 // Do any additional work that can be done here.
                 try
                 {
                     // EndGetHostByName blocks until the process completes.
+                    // 直接呼叫 EndXXX 方法，直接等候非同步的處理最後結果(也許是成功、也許是失敗)
+                    // 不過此時的 Thread 是被鎖定的，也就是無法繼續執行其他工作
                     IPHostEntry host = Dns.EndGetHostEntry(result);
                     string[] aliases = host.Aliases;
                     IPAddress[] addresses = host.AddressList;
